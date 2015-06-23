@@ -8,6 +8,7 @@
 namespace app\controllers;
 
 use Yii;
+use yii\web;
 use yii\helpers\Json;
 use yii\web\Controller;
 use yii\web\Session;
@@ -64,6 +65,19 @@ class PublicController extends Controller
             $arrReuslt = DmCom::getResults("验证码错误", "", 0);
         }
         return json_encode($arrReuslt);
+    }
+
+    /**
+     * 注销
+     * @return \yii\web\Response
+     */
+    public function actionLogout()
+    {
+        $session = new Session();
+        $session->open();
+        $session->removeAll();
+
+        return $this->goHome();
     }
 
     /**

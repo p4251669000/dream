@@ -110,7 +110,7 @@ use yii\bootstrap\ActiveForm;
     </div>
 
     <div class="copyright">
-        2014 &copy; Metronic. Admin Dashboard Template.
+        2014 &copy; dream by 谢锐
     </div>
 
     <!--[if lt IE 9]>

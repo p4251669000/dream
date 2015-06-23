@@ -76,7 +76,9 @@ if (!isset($userinfo)) {
                data-target=".navbar-collapse">
             </a>
             <!-- 上边菜单-->
-            <?= $this->render('_top', []) ?>
+            <?= $this->render('_top', [
+                'userinfo' => $userinfo
+            ]) ?>
             <!-- 结束上边菜单 -->
         </div>
         <!-- END HEADER INNER -->
@@ -110,7 +112,9 @@ if (!isset($userinfo)) {
         <!-- /.modal -->
         <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
         <!-- 左边菜单 -->
-        <?= $this->render('_left', []) ?>
+        <?= $this->render('_left', [
+            'userinfo' => $userinfo
+        ]) ?>
         <!-- 结束左边菜单 -->
 
         <!-- 选择theme -->
